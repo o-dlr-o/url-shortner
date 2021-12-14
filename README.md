@@ -1,6 +1,6 @@
 <!--suppress HtmlDeprecatedAttribute -->
 <p align="center">
-    <img alt="Unit Tests" src="https://github.com/o-dlr-o/url-shortner/actions/workflows/ci.yml/badge.svg"/>
+    <img alt="Unit Tests" src="https://github.com/o-dlr-o/url-shortner/actions/workflows/main.yml/badge.svg"/>
 </p>
 
 | Statements                  | Branches                | Functions                 | Lines             |

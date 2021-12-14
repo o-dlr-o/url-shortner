@@ -1,0 +1,25 @@
+version: "3"
+services:
+  db:
+    container_name: db-url-shortener
+    image: mariadb
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: url_shortener
+      MYSQL_ROOT_PASSWORD: test
+    ports:
+      - 3318:3306
+
+  api:
+    profiles:
+      - api
+    build: ./
+    container_name: api
+    depends_on:
+      - db
+    environment:
+      - PORT=3200
+      - SERVICE_BASE_URL="http://short.me/"
+    ports:
+      - 3200:3200
